@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сцена</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- HTML-структура без изменений -->
+    <div class="prologue" id="prologue"> <div class="prologue__languages"> <button class="prologue__lang-btn" data-lang="ru">Русский</button> <button class="prologue__lang-btn" data-lang="en">English</button> <button class="prologue__lang-btn" data-lang="es">Español</button> <button class="prologue__lang-btn" data-lang="pt">Português</button> </div> </div>
+    <button class="nav-trigger" aria-label="Открыть меню" aria-controls="navigation" aria-expanded="false"> <span class="nav-trigger__icon"></span> </button> <div class="nav-overlay" id="navigation" aria-hidden="true"> <nav class="nav-menu"> <ul> <li><a href="#overture" data-key="menu_overture"></a></li> <li><a href="#dialogue" data-key="menu_dialogue"></a></li> <li><a href="#exposition" data-key="menu_exposition"></a></li> <li><a href="#contact" data-key="menu_contact"></a></li> </ul> </nav> </div>
+    <div class="lang-switcher" id="lang-switcher"> <span class="lang-switcher__current" id="lang-current"></span> <div class="lang-switcher__options"> <a href="#" data-lang="ru">RU</a><span>|</span> <a href="#" data-lang="en">EN</a><span>|</span> <a href="#" data-lang="es">ES</a><span>|</span> <a href="#" data-lang="pt">PT</a> </div> </div>
+    <main>
+        <section class="overture" id="overture"> <img class="overture__image" src="images/prikosnovenie-tekhnologii.png" alt="Сближение человеческой и кибернетической рук"> <p class="overture__tagline" data-key="tagline"></p> </section>
+        <section class="dialogue" id="dialogue"> <div class="container"> <div class="dialogue__grid"> <div class="dialogue__he"> <div class="dialogue__texture dialogue__texture--he"></div> <p data-key="his_monologue_1"></p> <p data-key="his_monologue_2"></p> </div> <div></div> <div class="dialogue__she"> <div class="dialogue__texture dialogue__texture--she"></div> <p data-key="her_monologue_1"></p> <p data-key="her_monologue_2"></p> </div> </div> </div> </section>
+        <section class="exposition" id="exposition"> <div class="container"> <div class="exposition__grid"> <h2 class="exposition__title" data-key="exposition_title"></h2> <div class="exposition__ghost-logo"> <img src="images/logo-dy.png" alt=""> </div> <figure class="exposition__item exposition__item--1"> <img src="images/tango-dance-storm-emotion.png" alt="Эмоциональный танец пары, напоминающий шторм"> <figcaption data-key="expo_storm"></figcaption> </figure> <figure class="exposition__item exposition__item--2"> <img src="images/mans-hand-on-womans-back-tango.png" alt="Крупный план руки мужчины на спине женщины в танце танго"> <figcaption data-key="expo_whisper"></figcaption> </figure> <figure class="exposition__item exposition__item--3"> <img src="images/tango-legs-shadow-geometry.png" alt="Силуэты ног танцоров танго, отбрасывающие геометрические тени"> <figcaption data-key="expo_geometry"></figcaption> </figure> <figure class="exposition__item exposition__item--4"> <img src="images/tango-couple-in-vast-space.png" alt="Пара, танцующая танго в центре огромного пустого зала"> <figcaption data-key="expo_space"></figcaption> </figure> <figure class="exposition__item exposition__item--5"> <img src="images/forgotten-ring-tango-memory.png" alt="Красное кольцо, забытое на полу, на фоне удаляющейся пары"> <figcaption data-key="expo_memory"></figcaption> </figure> </div> </div> </section>
+        <section class="contact" id="contact"> <div class="container"> <h2 class="contact__title" data-key="contact_title"></h2> <p class="contact__email"> <a href="mailto:contact@dy-tango.art">contact @ dy-tango.art</a> </p> <div class="contact__socials"> <a href="#" aria-label="Instagram"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg> </a> <a href="#" aria-label="Telegram"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2L11 13L2 9L22 2z"></path><path d="M22 2L15 22L11 13L2 9L22 2z"></path></svg> </a> <a href="#" aria-label="YouTube"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2A29 29 0 0 0 23 11.75a29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg> </a> </div> </div> </section>
+    </main>
+    <footer class="epilogue" id="epilogue"> <div class="container"> <img class="epilogue__logo" src="images/logo-dy.png" alt="Логотип DY"> </div> </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
