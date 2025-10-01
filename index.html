@@ -5,26 +5,151 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Сцена</title>
 
+    <!-- Подключение шрифтов -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+
+    <!-- Подключение файла стилей -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <!-- HTML-структура без изменений -->
-    <div class="prologue" id="prologue"> <div class="prologue__languages"> <button class="prologue__lang-btn" data-lang="ru">Русский</button> <button class="prologue__lang-btn" data-lang="en">English</button> <button class="prologue__lang-btn" data-lang="es">Español</button> <button class="prologue__lang-btn" data-lang="pt">Português</button> </div> </div>
-    <button class="nav-trigger" aria-label="Открыть меню" aria-controls="navigation" aria-expanded="false"> <span class="nav-trigger__icon"></span> </button> <div class="nav-overlay" id="navigation" aria-hidden="true"> <nav class="nav-menu"> <ul> <li><a href="#overture" data-key="menu_overture"></a></li> <li><a href="#dialogue" data-key="menu_dialogue"></a></li> <li><a href="#exposition" data-key="menu_exposition"></a></li> <li><a href="#contact" data-key="menu_contact"></a></li> </ul> </nav> </div>
-    <div class="lang-switcher" id="lang-switcher"> <span class="lang-switcher__current" id="lang-current"></span> <div class="lang-switcher__options"> <a href="#" data-lang="ru">RU</a><span>|</span> <a href="#" data-lang="en">EN</a><span>|</span> <a href="#" data-lang="es">ES</a><span>|</span> <a href="#" data-lang="pt">PT</a> </div> </div>
+    <!-- Пролог (Выбор языка) -->
+    <div class="prologue" id="prologue">
+        <div class="prologue__languages">
+            <button class="prologue__lang-btn" data-lang="ru">Русский</button>
+            <button class="prologue__lang-btn" data-lang="en">English</button>
+            <button class="prologue__lang-btn" data-lang="es">Español</button>
+            <button class="prologue__lang-btn" data-lang="pt">Português</button>
+        </div>
+    </div>
+
+    <!-- Режиссерский Пульт (Навигация) -->
+    <button class="nav-trigger" aria-label="Открыть меню" aria-controls="navigation" aria-expanded="false">
+        <span class="nav-trigger__icon"></span>
+    </button>
+    <nav class="nav-overlay" id="navigation" aria-hidden="true">
+        <ul>
+            <li><a href="#intro" data-key="menu_intro"></a></li>
+            <li><a href="#repertoire" data-key="menu_repertoire"></a></li>
+            <li><a href="#exposition" data-key="menu_exposition"></a></li>
+            <li><a href="#collaboration" data-key="menu_collaboration"></a></li>
+            <li><a href="#contact" data-key="menu_contact"></a></li>
+        </ul>
+    </nav>
+
+    <!-- Знак Библиотекаря (Смена языка) -->
+    <div class="lang-switcher" id="lang-switcher">
+        <span class="lang-switcher__current" id="lang-current"></span>
+        <div class="lang-switcher__options">
+            <a href="#" data-lang="ru">RU</a><span>|</span>
+            <a href="#" data-lang="en">EN</a><span>|</span>
+            <a href="#" data-lang="es">ES</a><span>|</span>
+            <a href="#" data-lang="pt">PT</a>
+        </div>
+    </div>
+
+    <!-- Основное Действие -->
     <main>
-        <section class="overture" id="overture"> <img class="overture__image" src="images/prikosnovenie-tekhnologii.png" alt="Сближение человеческой и кибернетической рук"> <p class="overture__tagline" data-key="tagline"></p> </section>
-        <section class="dialogue" id="dialogue"> <div class="container"> <div class="dialogue__grid"> <div class="dialogue__he"> <div class="dialogue__texture dialogue__texture--he"></div> <p data-key="his_monologue_1"></p> <p data-key="his_monologue_2"></p> </div> <div></div> <div class="dialogue__she"> <div class="dialogue__texture dialogue__texture--she"></div> <p data-key="her_monologue_1"></p> <p data-key="her_monologue_2"></p> </div> </div> </div> </section>
-        <section class="exposition" id="exposition"> <div class="container"> <div class="exposition__grid"> <h2 class="exposition__title" data-key="exposition_title"></h2> <div class="exposition__ghost-logo"> <img src="images/logo-dy.png" alt=""> </div> <figure class="exposition__item exposition__item--1"> <img src="images/tango-dance-storm-emotion.png" alt="Эмоциональный танец пары, напоминающий шторм"> <figcaption data-key="expo_storm"></figcaption> </figure> <figure class="exposition__item exposition__item--2"> <img src="images/mans-hand-on-womans-back-tango.png" alt="Крупный план руки мужчины на спине женщины в танце танго"> <figcaption data-key="expo_whisper"></figcaption> </figure> <figure class="exposition__item exposition__item--3"> <img src="images/tango-legs-shadow-geometry.png" alt="Силуэты ног танцоров танго, отбрасывающие геометрические тени"> <figcaption data-key="expo_geometry"></figcaption> </figure> <figure class="exposition__item exposition__item--4"> <img src="images/tango-couple-in-vast-space.png" alt="Пара, танцующая танго в центре огромного пустого зала"> <figcaption data-key="expo_space"></figcaption> </figure> <figure class="exposition__item exposition__item--5"> <img src="images/forgotten-ring-tango-memory.png" alt="Красное кольцо, забытое на полу, на фоне удаляющейся пары"> <figcaption data-key="expo_memory"></figcaption> </figure> </div> </div> </section>
-        <section class="contact" id="contact"> <div class="container"> <h2 class="contact__title" data-key="contact_title"></h2> <p class="contact__email"> <a href="mailto:contact@dy-tango.art">contact @ dy-tango.art</a> </p> <div class="contact__socials"> <a href="#" aria-label="Instagram"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg> </a> <a href="#" aria-label="Telegram"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2L11 13L2 9L22 2z"></path><path d="M22 2L15 22L11 13L2 9L22 2z"></path></svg> </a> <a href="#" aria-label="YouTube"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2A29 29 0 0 0 23 11.75a29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg> </a> </div> </div> </section>
+        <!-- Сцена 1: Увертюра -->
+        <section class="overture" id="overture">
+            <img src="images/dy-master-anchor.webp" alt="Пара в динамичной позе танго на темном фоне">
+            <p class="overture__tagline" data-key="tagline"></p>
+        </section>
+
+        <!-- Сцена 2: Представление -->
+        <section class="intro" id="intro">
+            <div class="container">
+                <h2 class="intro__headline" data-key="intro_headline"></h2>
+                <p class="intro__tagline" data-key="intro_tagline"></p>
+                <figure class="intro__figure">
+                    <img src="images/dy-master-closeup.webp" alt="Крупный план артистов танго в объятии">
+                </figure>
+                <div class="intro__text">
+                    <p data-key="intro_paragraph_1"></p>
+                    <p data-key="intro_paragraph_2"></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Сцена 3: Репертуар -->
+        <section class="repertoire" id="repertoire">
+            <div class="container">
+                <div class="repertoire__item repertoire__item--show">
+                    <img src="images/dy-master-action.webp" alt="Артисты в экспрессивном танцевальном движении">
+                    <div class="repertoire__content">
+                        <h3 data-key="repertoire_show_title"></h3>
+                        <p data-key="repertoire_show_desc"></p>
+                        <small data-key="repertoire_show_details"></small>
+                    </div>
+                </div>
+                <div class="repertoire__item repertoire__item--mc">
+                    <img src="images/dy-gallery-dust-storm.webp" alt="Танцоры создают вихрь пыли движением ноги">
+                    <div class="repertoire__content">
+                        <h3 data-key="repertoire_mc_title"></h3>
+                        <p data-key="repertoire_mc_desc"></p>
+                        <small data-key="repertoire_mc_details"></small>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Сцена 4: Экспозиция -->
+        <section class="exposition" id="exposition">
+            <div class="container">
+                <div class="exposition__grid">
+                    <h2 class="exposition__title" data-key="exposition_title"></h2>
+                    <figure class="exposition__item item--large-h"><img src="images/dy-gallery-space.webp" alt="Пара танго в огромном пустом пространстве"><figcaption data-key="expo_space"></figcaption></figure>
+                    <figure class="exposition__item item--large-v"><img src="images/dy-gallery-whisper.webp" alt="Мужская рука на спине женщины в танго"><figcaption data-key="expo_whisper"></figcaption></figure>
+                    <figure class="exposition__item"><img src="images/dy-gallery-hands.webp" alt="Сплетение рук в танго"><figcaption data-key="expo_hands"></figcaption></figure>
+                    <figure class="exposition__item"><img src="images/dy-gallery-memory.webp" alt="Забытое кольцо на полу"><figcaption data-key="expo_memory"></figcaption></figure>
+                    <figure class="exposition__item"><img src="images/dy-gallery-geometry.webp" alt="Геометричные тени от ног танцоров"><figcaption data-key="expo_geometry"></figcaption></figure>
+                </div>
+            </div>
+        </section>
+
+        <!-- Сцена 5: Сотрудничество -->
+        <section class="collaboration" id="collaboration">
+            <div class="container">
+                <h2 data-key="collaboration_title"></h2>
+                <ul>
+                    <li data-key="collab_item_1"></li>
+                    <li data-key="collab_item_2"></li>
+                    <li data-key="collab_item_3"></li>
+                    <li data-key="collab_item_4"></li>
+                    <li data-key="collab_item_5"></li>
+                </ul>
+                <p class="collaboration__cta" data-key="collaboration_cta"></p>
+            </div>
+        </section>
+
+        <!-- Сцена 6: Антракт -->
+        <section class="contact" id="contact">
+            <div class="container contact__container">
+                <div class="contact__text">
+                    <h2 data-key="contact_title"></h2>
+                    <a href="mailto:contact@dy-tango.art" class="contact__email" data-key="contact_email"></a>
+                    <div class="contact__socials">
+                        <a href="#" aria-label="Instagram"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+                        <a href="#" aria-label="Telegram"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2L11 13L2 9L22 2z"></path><path d="M22 2L15 22L11 13L2 9L22 2z"></path></svg></a>
+                        <a href="#" aria-label="YouTube"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2A29 29 0 0 0 23 11.75a29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg></a>
+                    </div>
+                </div>
+                <figure class="contact__figure">
+                    <img src="images/dy-master-detail.webp" alt="Деталь танцевальной туфельки на темном полу">
+                </figure>
+            </div>
+        </section>
     </main>
-    <footer class="epilogue" id="epilogue"> <div class="container"> <img class="epilogue__logo" src="images/logo-dy.png" alt="Логотип DY"> </div> </footer>
 
-    <script src="script.js"></script>
+    <!-- Сцена 7: Поклон -->
+    <footer class="epilogue" id="epilogue">
+        <img src="images/logo-dy.webp" alt="Логотип DY">
+    </footer>
 
+    <!-- Подключение файла скриптов -->
+    <script src="js/libretto.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
